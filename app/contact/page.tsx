@@ -1,32 +1,11 @@
 import Link from 'next/link'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 
 export default function Contact() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-gray-900">Humaling</Link>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-indigo-600 transition-colors">
-                About
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-indigo-600 font-medium">
-                Contact
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="contact" />
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -182,28 +161,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h4 className="text-xl font-semibold mb-4">Humaling</h4>
-            <p className="text-gray-400 mb-6">
-              Built with Next.js and DecapCMS for modern web development.
-            </p>
-            <div className="flex justify-center space-x-6">
-              <Link href="/admin" className="text-gray-400 hover:text-white transition-colors">
-                Admin Panel
-              </Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 } 

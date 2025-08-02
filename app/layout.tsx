@@ -16,6 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="//www.instagram.com/embed.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
